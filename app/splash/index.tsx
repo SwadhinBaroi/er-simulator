@@ -8,7 +8,7 @@ export default function App() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.replace('/home');
+      router.replace('/onboarding');
     }, 8000);
 
     return () => clearTimeout(timer);
