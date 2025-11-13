@@ -17,6 +17,7 @@ module.exports = {
         background: '#FBFEFE',
         'dark-gray': '#6A707C',
         grayText: '#8E8E93',
+        offWhite: '#F7F9FA',
       },
     },
   },

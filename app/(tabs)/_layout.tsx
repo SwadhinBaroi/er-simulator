@@ -14,7 +14,7 @@ export default function Layout() {
   return (
     <>
       <StatusBar backgroundColor="#fff" barStyle="dark-content" />
-      <SafeAreaView className="flex-1 bg-[#fff]" edges={['top', 'left', 'right']}>
+      <SafeAreaView className="bg-offWhite flex-1" edges={['top', 'left', 'right']}>
         <View className={cn('flex-1 border-none bg-[#fff] pb-4')}>
           <StyledTabs
             screenOptions={{

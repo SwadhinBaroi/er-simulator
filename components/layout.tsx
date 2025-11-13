@@ -1,3 +1,4 @@
+import { COLORS } from 'constants/color';
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
 export default function Layout({ children }: { children?: React.ReactNode }) {
@@ -6,7 +7,7 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
     <ScrollView
       className="flex-1"
       contentContainerStyle={{ paddingBottom: 20 }}
-      style={{ backgroundColor: '#fff' }}>
+      style={{ backgroundColor: COLORS.offWhite }}>
       {children}
     </ScrollView>
     // </SafeAreaView>
