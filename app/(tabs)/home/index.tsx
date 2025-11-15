@@ -17,7 +17,7 @@ import { useRouter } from 'expo-router';
 
 export default function Index() {
   const dummyForm = useForm();
-  const [guest, useGuest] = useState(true);
+  const [guest, useGuest] = useState(false);
 
   const router = useRouter();
 
@@ -70,6 +70,7 @@ export default function Index() {
 
           <View style={{ flexDirection: 'row', gap: 10, marginVertical: 12 }}>
             <TouchableOpacity
+              onPress={() => router.push('../others/chatbox')}
               style={{
                 flex: 1,
                 backgroundColor: COLORS.deep,

@@ -276,7 +276,7 @@ export default function PlanPrice() {
                 <View style={{ width: '95%', marginTop: 5, marginBottom: 20 }}>
                   <TouchableOpacity
                     onPress={() => {
-                      router.push('/auth/login');
+                      router.push('/(tabs)/home');
                     }}
                     style={{
                       borderWidth: 1,

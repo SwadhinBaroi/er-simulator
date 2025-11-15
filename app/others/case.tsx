@@ -89,33 +89,70 @@ const Case = () => {
               style={{ color: COLORS.deep, marginTop: 30 }}>
               Learning Objectives:
             </Text>
-            <View style={{ padding: 20 }}>
+            <View style={{ paddingTop: 20 }}>
               <BlurView
-                intensity={50}
+                intensity={30}
                 tint="dark"
                 style={{
                   borderRadius: 10,
-                  padding: 20,
+                  padding: 15,
                   alignItems: 'center',
+                  justifyContent: 'center',
+                  flexDirection: 'row',
+                  gap: 10,
+                  borderWidth: 1,
+                  overflow: 'hidden',
+                  borderColor: '#40464B',
                 }}>
                 {/* "Normal" text */}
-                <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
-                  Complete the simulation to
+                <Text style={{ color: '#40464B', fontSize: 18 }}>
+                  Complete the simulation to Unlock
                 </Text>
-
-                {/* Blurry text underneath */}
-                <Text
-                  style={{
-                    position: 'absolute',
-                    color: '#fff',
-                    fontSize: 18,
-                    opacity: 0.1,
-                    textShadowColor: '#fff',
-                    textShadowOffset: { width: 0, height: 0 },
-                    textShadowRadius: 10,
-                  }}>
-                  Complete the simulation to unlock
+                <LockKeyhole color={'#527F7B'} />
+              </BlurView>
+            </View>
+            <View style={{ paddingTop: 20 }}>
+              <BlurView
+                intensity={30}
+                tint="dark"
+                style={{
+                  borderRadius: 10,
+                  padding: 15,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexDirection: 'row',
+                  gap: 10,
+                  borderWidth: 1,
+                  overflow: 'hidden',
+                  borderColor: '#40464B',
+                }}>
+                {/* "Normal" text */}
+                <Text style={{ color: '#40464B', fontSize: 18 }}>
+                  Complete the simulation to Unlock
                 </Text>
+                <LockKeyhole color={'#527F7B'} />
+              </BlurView>
+            </View>
+            <View style={{ paddingTop: 20 }}>
+              <BlurView
+                intensity={30}
+                tint="dark"
+                style={{
+                  borderRadius: 10,
+                  padding: 15,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexDirection: 'row',
+                  gap: 10,
+                  borderWidth: 1,
+                  overflow: 'hidden',
+                  borderColor: '#40464B',
+                }}>
+                {/* "Normal" text */}
+                <Text style={{ color: '#40464B', fontSize: 18 }}>
+                  Complete the simulation to Unlock
+                </Text>
+                <LockKeyhole color={'#527F7B'} />
               </BlurView>
             </View>
           </View>
