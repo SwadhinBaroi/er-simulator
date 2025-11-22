@@ -117,6 +117,26 @@ const Support = () => {
           </View>
         </View>
       </View>
+      <View style={{ width: '92%', alignSelf: 'center', marginTop: 50, marginBottom: 40 }}>
+        <TouchableOpacity
+          style={{
+            backgroundColor: COLORS.deep,
+            paddingHorizontal: 20,
+            paddingVertical: 12,
+            borderRadius: 10,
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderColor: COLORS.deep,
+            borderWidth: 1,
+            flexDirection: 'row',
+            gap: 10,
+          }}>
+          <Text className="font-roboto font-medium" style={{ fontSize: 20, color: '#fff' }}>
+            Submit
+          </Text>
+        </TouchableOpacity>
+      </View>
     </Layout>
   );
 };

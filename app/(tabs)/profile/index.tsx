@@ -71,6 +71,7 @@ export default function Index() {
           </View>
         </View>
         <TouchableOpacity
+          onPress={() => router.push('/profile/editprofile')}
           style={{
             backgroundColor: '#527F7B',
             paddingHorizontal: 20,
