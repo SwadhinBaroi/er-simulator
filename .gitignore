@@ -10,7 +10,7 @@ npm-debug.*
 *.orig.*
 web-build/
 
-
+bun.lock
 
 
 ios
@@ -26,4 +26,3 @@ android
 
 node_modules
 .env
-

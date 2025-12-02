@@ -128,7 +128,7 @@ export default function Index() {
               borderColor: COLORS.deep,
               borderRadius: 6,
             }}>
-            <Text className="py-3 text-center text-xl font-medium text-[#346C6C] ">
+            <Text className="py-3 text-center text-lg font-medium text-[#346C6C]">
               Suggested Pathways
             </Text>
           </TouchableOpacity>

@@ -24,12 +24,12 @@ const Treatments = () => {
         elevation: 4,
       }}>
       <ScrollView
+        nestedScrollEnabled={true}
         style={{
           height: 225,
-          flex: 1,
           paddingHorizontal: 15,
-          paddingTop: 25,
-          paddingBottom: 5,
+          paddingTop: 15,
+          paddingBottom: 25,
         }}>
         <View style={{ flex: 1, flexDirection: 'row', gap: 10, marginBottom: 20 }}>
           <TouchableOpacity
