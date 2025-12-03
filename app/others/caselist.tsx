@@ -20,7 +20,6 @@ const CaseList = () => {
 
   return (
     <Layout edges={["top", "bottom"]}>
-      <StatusBar translucent={true} backgroundColor="transparent" barStyle="dark-content" />
       <View
         style={{
           flex: 1,

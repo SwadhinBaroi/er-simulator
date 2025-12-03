@@ -22,7 +22,6 @@ const Case = () => {
 
   return (
     <Layout edges={['top', 'bottom']}>
-      <StatusBar translucent={true} backgroundColor="transparent" barStyle="dark-content" />
       <View style={{ flex: 1, width: '90%', marginHorizontal: 'auto' }}>
         <View
           style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>

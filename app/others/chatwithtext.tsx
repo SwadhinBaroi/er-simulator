@@ -19,6 +19,7 @@ import Horizontal from '../../assets/svgs/horizontal.svg';
 import Vertical from '../../assets/svgs/vertical.svg';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
+import { Layout } from 'components/ui/layout';
 
 const ChatWithText = () => {
   return (

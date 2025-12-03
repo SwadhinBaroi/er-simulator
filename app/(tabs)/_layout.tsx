@@ -1,6 +1,6 @@
 import NoRippleTabButton from 'components/no-rippler-pressable';
 import { Tabs } from 'expo-router';
-import { StatusBar, View } from 'react-native';
+import { View } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { cn } from 'utils';
 import CustomTabBar from 'components/CustomTabBar';
@@ -12,7 +12,6 @@ export default function Layout() {
 
   return (
     <>
-      <StatusBar backgroundColor="transparent" barStyle="dark-content" />
       <SafeAreaView className="flex-1" edges={['top', 'left', 'right']}>
         <View className={cn('flex-1 border-none bg-[#fff]')}>
           <StyledTabs
