@@ -1,42 +1,36 @@
-import { Input } from 'components/input';
-
 import InputForm from 'components/ui/inputform';
 import InputFormHalf from 'components/ui/inputformhalf';
-import { Layout } from 'components/ui/layout';
 import { COLORS } from 'constants/color';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
-import { Lock, Mail } from 'lucide-react-native';
 import { useForm } from 'react-hook-form';
 import {
-  Image,
   Text,
   View,
-  Dimensions,
   ImageBackground,
   TouchableOpacity,
   useWindowDimensions,
+  Platform,
 } from 'react-native';
 import Google from '../../assets/svgs/google.svg';
 import Apple from '../../assets/svgs/apple.svg';
-import { KeyboardAwareScrollView, WindowDimensionsEvents } from 'react-native-keyboard-controller';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-controller';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Layout from 'components/layout';
 
 export default function SignUp() {
   const router = useRouter();
-
   const { height } = useWindowDimensions();
-
   const dummyForm = useForm();
 
   return (
-    <>
+    <Layout>
       <View className="relative  flex-1" style={{ width: '100%', height: '100%' }}>
         <LinearGradient
           colors={['#101112', '#000000']}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
-          className="absolute inset-0   py-16">
+          >
           {/* Radial gradient overlay */}
           <ImageBackground
             source={require('../../assets/images/splash-radial-gradient.png')}
@@ -123,12 +117,6 @@ export default function SignUp() {
                     icon={'ClipboardPlus'}
                   />
                 </View>
-                {/* <View className="w-full flex-row justify-between">
-                  <Text className="text-lg font-light text-white ">Remember Me</Text>
-                  <Text className="text-lg font-medium text-[#D62E2F] underline">
-                    Forgot Password?
-                  </Text>
-                </View> */}
                 <View style={{ width: '100%', marginTop: 15 }}>
                   <TouchableOpacity
                     style={{
@@ -197,6 +185,6 @@ export default function SignUp() {
           </SafeAreaView>
         </LinearGradient>
       </View>
-    </>
+    </Layout>
   );
 }

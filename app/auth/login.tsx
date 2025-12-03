@@ -15,6 +15,7 @@ import {
   ImageBackground,
   TouchableOpacity,
   useWindowDimensions,
+  Platform,
 } from 'react-native';
 import Google from '../../assets/svgs/google.svg';
 import Apple from '../../assets/svgs/apple.svg';
@@ -34,7 +35,7 @@ export default function Page() {
           colors={['#101112', '#000000']}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
-          className="absolute inset-0   py-16">
+          className={`absolute inset-0 ${Platform.OS === 'ios' ? 'py-16' : 'pt-8'}`}>
           {/* Radial gradient overlay */}
           <ImageBackground
             source={require('../../assets/images/splash-radial-gradient.png')}
