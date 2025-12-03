@@ -1,8 +1,6 @@
-import Layout from 'components/layout';
 import { COLORS } from 'constants/color';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import {
-  X,
   CreditCard,
   Bell,
   Globe,
@@ -16,6 +14,7 @@ import Suggession from '../../../assets/svgs/suggestion.svg';
 import Upload from '../../../assets/svgs/upload.svg';
 import Question from '../../../assets/svgs/question.svg';
 import { useRouter } from 'expo-router';
+import { Layout } from 'components/ui/layout';
 
 export default function Index() {
   const router = useRouter();
@@ -38,6 +37,8 @@ export default function Index() {
           </TouchableOpacity>
         </View> */}
       </View>
+
+      {/* profile info */}
       <View
         style={{
           flexDirection: 'row',
@@ -47,8 +48,9 @@ export default function Index() {
           gap: 50,
           backgroundColor: '#DAE8E8',
           paddingVertical: 15,
+          borderRadius: 10,
         }}>
-        <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
+        <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center', }}>
           <View>
             <Image
               source={require('../../../assets/images/avatar.jpg')}
@@ -69,12 +71,11 @@ export default function Index() {
               User Specialist
             </Text>
           </View>
-        </View>
         <TouchableOpacity
           onPress={() => router.push('/profile/editprofile')}
           style={{
             backgroundColor: '#527F7B',
-            paddingHorizontal: 20,
+            paddingHorizontal: 14,
             paddingVertical: 12,
             borderRadius: 8,
           }}>
@@ -82,7 +83,10 @@ export default function Index() {
             Edit Profile
           </Text>
         </TouchableOpacity>
+        </View>
       </View>
+
+      {/* career overview */}
       <View style={{ width: '92%', marginHorizontal: 'auto' }}>
         <View style={{ marginTop: 40, marginBottom: 20 }}>
           <Text
@@ -390,7 +394,7 @@ export default function Index() {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={{ marginBottom: 60, flex: 1 }}>
+        <View style={{ flex: 1 }}>
           <TouchableOpacity
             style={{
               width: '100%',

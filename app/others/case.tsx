@@ -1,12 +1,12 @@
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet, StatusBar } from 'react-native';
 import React, { useState } from 'react';
-import Layout from 'components/layout';
 import { COLORS } from 'constants/color';
-import { ChevronLeft, CircleCheckBig, LockKeyhole } from 'lucide-react-native';
+import { ChevronLeft, LockKeyhole } from 'lucide-react-native';
 import { cases } from 'utils/dumydata';
 import { useRouter } from 'expo-router';
 import Frame from '../../assets/svgs/frame.svg';
 import { BlurView } from 'expo-blur';
+import { Layout } from 'components/ui/layout';
 
 const Case = () => {
   const [totalCase, setTotalCase] = useState(cases);
@@ -21,8 +21,9 @@ const Case = () => {
   };
 
   return (
-    <Layout>
-      <View style={{ flex: 1, width: '90%', marginHorizontal: 'auto', marginTop: 20 }}>
+    <Layout edges={['top', 'bottom']}>
+      <StatusBar translucent={true} backgroundColor="transparent" barStyle="dark-content" />
+      <View style={{ flex: 1, width: '90%', marginHorizontal: 'auto' }}>
         <View
           style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
           <TouchableOpacity

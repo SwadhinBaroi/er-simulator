@@ -1,6 +1,5 @@
 import NoRippleTabButton from 'components/no-rippler-pressable';
 import { Tabs } from 'expo-router';
-import { Briefcase, Settings2, UserRound } from 'lucide-react-native';
 import { StatusBar, View } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { cn } from 'utils';
@@ -13,15 +12,15 @@ export default function Layout() {
 
   return (
     <>
-      <StatusBar backgroundColor="#fff" barStyle="dark-content" />
-      <SafeAreaView className="bg-offWhite flex-1" edges={['top', 'left', 'right']}>
-        <View className={cn('flex-1 border-none bg-[#fff] pb-4')}>
+      <StatusBar backgroundColor="transparent" barStyle="dark-content" />
+      <SafeAreaView className="flex-1" edges={['top', 'left', 'right']}>
+        <View className={cn('flex-1 border-none bg-[#fff]')}>
           <StyledTabs
             screenOptions={{
               headerShown: false,
               tabBarStyle: {
                 height: 40 + (insets.bottom || 0),
-                paddingBottom: insets.bottom || 0,
+                paddingBottom: insets.bottom + 12 || 0,
                 backgroundColor: '#fff',
                 borderTopWidth: 0,
                 // iOS shadow

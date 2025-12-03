@@ -3,51 +3,27 @@ import {
   Text,
   ImageBackground,
   TouchableOpacity,
-  useWindowDimensions,
   TextInput,
   KeyboardAvoidingView,
   ScrollView,
   Platform,
 } from 'react-native';
-import React from 'react';
-import { COLORS } from 'constants/color';
 import { BlurView } from 'expo-blur';
 import { LinearGradient } from 'expo-linear-gradient';
 import TV from '../../assets/svgs/tv.svg';
 import Med from '../../assets/svgs/med.svg';
 import Mic from '../../assets/svgs/mic.svg';
 import Send from '../../assets/svgs/send.svg';
-import TLogo from '../../assets/svgs/text.svg';
-// import { KeyboardAvoidingView, KeyboardAwareScrollView } from 'react-native-keyboard-controller';
-import { Input } from 'components/input';
 import { X } from 'lucide-react-native';
 import Horizontal from '../../assets/svgs/horizontal.svg';
 import Vertical from '../../assets/svgs/vertical.svg';
-import Layout from 'components/layout';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 
 const ChatWithText = () => {
-  const { height } = useWindowDimensions();
   return (
     <View style={{ flex: 1 }}>
       <ImageBackground source={require('../../assets/images/hospital.jpg')} style={{ flex: 1 }}>
-        {/* <View
-          style={{
-            height: 10,
-            width: '100%',
-            backgroundColor: '#06272B',
-            justifyContent: 'flex-end',
-            position: 'absolute',
-            bottom: 0,
-          }}
-        /> */}
-        {/* <KeyboardAwareScrollView
-          style={{ flex: 1 }}
-          contentContainerStyle={{
-            minHeight: height,
-            width: '100%',
-          }}> */}
         <SafeAreaView
           style={{
             flexDirection: 'row',

@@ -1,4 +1,3 @@
-// import { COLORS } from '@/constants';
 import { ReactNode } from 'react';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-controller';
 import { SafeAreaView, SafeAreaViewProps } from 'react-native-safe-area-context';
@@ -18,11 +17,11 @@ export function Layout({ children, style, ...props }: Props) {
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
         keyboardDismissMode="interactive"
-        bottomOffset={20}
+        bottomOffset={0}
         contentContainerStyle={[
           {
             flexGrow: 1,
-            gap: 8,
+            paddingBottom: 16 + padding,
           },
           style,
         ]}>

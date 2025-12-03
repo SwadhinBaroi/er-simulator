@@ -1,15 +1,11 @@
 import { View, Text, TouchableOpacity } from 'react-native';
-import React, { useState } from 'react';
-import Layout from 'components/layout';
+import {Layout} from 'components/ui/layout';
 import { COLORS } from 'constants/color';
 import Hat from '../../../assets/svgs/hat.svg';
-import { Bookmark, CircleCheckBig, Download, Play, Plus, Save, X } from 'lucide-react-native';
-import NewImprovement from 'components/ui/newimprovement';
-import SavedImprovement from 'components/ui/savedimprovement';
+import { CircleCheckBig, Download, X } from 'lucide-react-native';
 import { useRouter } from 'expo-router';
 
 const SavedCertificate = () => {
-  const [saved, setSaved] = useState(false);
   const router = useRouter();
 
   return (

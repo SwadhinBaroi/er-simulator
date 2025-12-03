@@ -25,11 +25,12 @@ const Treatments = () => {
       }}>
       <ScrollView
         nestedScrollEnabled={true}
-        style={{
-          height: 225,
+        contentContainerStyle={{
           paddingHorizontal: 15,
           paddingTop: 15,
-          paddingBottom: 25,
+        }}
+        style={{
+          height: 225,
         }}>
         <View style={{ flex: 1, flexDirection: 'row', gap: 10, marginBottom: 20 }}>
           <TouchableOpacity

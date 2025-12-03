@@ -1,19 +1,9 @@
-import { View, Text, TouchableOpacity, TextInput } from 'react-native';
-import React, { useState } from 'react';
-import Layout from 'components/layout';
-import { COLORS } from 'constants/color';
-import Hat from '../../../assets/svgs/hat.svg';
-import { Bookmark, Play, Plus, Save, X } from 'lucide-react-native';
-import NewImprovement from 'components/ui/newimprovement';
-import SavedImprovement from 'components/ui/savedimprovement';
-import { useRouter } from 'expo-router';
-import { Input } from 'components/input';
-import Camera from '../../../assets/svgs/camera.svg';
-import CardWithBar from 'components/ui/cardwithbar';
+import { View, Text } from 'react-native';
+import { useState } from 'react';
 import ProgressCard from 'components/ui/progresscard';
+import { Layout } from 'components/ui/layout';
 
 const MyPlan = () => {
-  const router = useRouter();
   const [completed, setCompleted] = useState(true);
   return (
     <Layout>
@@ -35,7 +25,7 @@ const MyPlan = () => {
         </View> */}
       </View>
 
-      <View style={{ width: '92%', marginHorizontal: 'auto', marginTop: 50, gap: 20 }}>
+      <View style={{ width: '92%', marginHorizontal: 'auto', marginTop: 35, gap: 20 }}>
         <ProgressCard serial={1} complete={completed} />
         <ProgressCard serial={2} complete={false} />
         <ProgressCard serial={3} complete={completed} />

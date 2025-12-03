@@ -1,6 +1,5 @@
 import { View, Text, TouchableOpacity } from 'react-native';
-import React from 'react';
-import Layout from 'components/layout';
+import {Layout} from 'components/ui/layout';
 import { COLORS } from 'constants/color';
 import { CircleCheckBig, X } from 'lucide-react-native';
 import { router } from 'expo-router';

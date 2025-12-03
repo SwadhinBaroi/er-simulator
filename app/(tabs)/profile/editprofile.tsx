@@ -1,14 +1,8 @@
 import { View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
-import React, { useState } from 'react';
-import Layout from 'components/layout';
+import { Layout } from 'components/ui/layout';
 import { COLORS } from 'constants/color';
-import Hat from '../../../assets/svgs/hat.svg';
-import { Bookmark, Play, Plus, Save, User, ChevronLeft } from 'lucide-react-native';
-import NewImprovement from 'components/ui/newimprovement';
-import SavedImprovement from 'components/ui/savedimprovement';
+import { User, ChevronLeft } from 'lucide-react-native';
 import { useRouter } from 'expo-router';
-import { Input } from 'components/input';
-import Camera from '../../../assets/svgs/camera.svg';
 
 const EditProfile = () => {
   const router = useRouter();

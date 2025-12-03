@@ -1,6 +1,6 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity, Platform, StatusBar } from 'react-native';
 import React, { useState } from 'react';
-import Layout from 'components/layout';
+import {Layout} from 'components/ui/layout';
 import { COLORS } from 'constants/color';
 import { ChevronLeft } from 'lucide-react-native';
 import { cases } from 'utils/dumydata';
@@ -19,8 +19,15 @@ const CaseList = () => {
   };
 
   return (
-    <Layout>
-      <View style={{ flex: 1, width: '90%', marginHorizontal: 'auto', marginTop: 20 }}>
+    <Layout edges={["top", "bottom"]}>
+      <StatusBar translucent={true} backgroundColor="transparent" barStyle="dark-content" />
+      <View
+        style={{
+          flex: 1,
+          width: '90%',
+          marginHorizontal: 'auto',
+         //  marginTop: Platform.OS === 'ios' ? 20 : 60,
+        }}>
         <View
           style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
           <TouchableOpacity

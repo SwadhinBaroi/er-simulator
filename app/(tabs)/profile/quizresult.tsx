@@ -1,11 +1,7 @@
 import { View, Text, TouchableOpacity } from 'react-native';
-import React, { useState } from 'react';
-import Layout from 'components/layout';
+import {Layout} from 'components/ui/layout';
 import { COLORS } from 'constants/color';
-import Hat from '../../../assets/svgs/hat.svg';
-import { Bookmark, Download, Mail, Play, Plus, Save, User, X } from 'lucide-react-native';
-import NewImprovement from 'components/ui/newimprovement';
-import SavedImprovement from 'components/ui/savedimprovement';
+import { Download, Mail, User, X } from 'lucide-react-native';
 import { useRouter } from 'expo-router';
 import Success from '../../../assets/svgs/success.svg';
 

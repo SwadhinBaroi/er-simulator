@@ -1,6 +1,3 @@
-import { Input } from 'components/input';
-
-import InputForm from 'components/ui/inputform';
 import { Layout } from 'components/ui/layout';
 import { COLORS } from 'constants/color';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -8,53 +5,37 @@ import { useRouter } from 'expo-router';
 import { CircleCheckBig } from 'lucide-react-native';
 import { useForm } from 'react-hook-form';
 import {
-  Image,
   Text,
   View,
-  Dimensions,
   ImageBackground,
   TouchableOpacity,
   useWindowDimensions,
-  StyleSheet,
+  Platform,
 } from 'react-native';
-import Google from '../../assets/svgs/google.svg';
-import Apple from '../../assets/svgs/apple.svg';
-import { KeyboardAwareScrollView, WindowDimensionsEvents } from 'react-native-keyboard-controller';
-import Successful from '../../assets/svgs/successful.svg';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-controller';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Green from '../../assets/svgs/greenbatch.svg';
 import Red from '../../assets/svgs/redbatch.svg';
 
 export default function PlanPrice() {
   const router = useRouter();
-
   const { height } = useWindowDimensions();
 
-  const dummyForm = useForm();
-
   return (
-    <>
+    <Layout>
       <View className="relative  flex-1" style={{ width: '100%', height: '100%' }}>
         <LinearGradient
           colors={['#101112', '#000000']}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
-          className="absolute inset-0   py-16">
+          className='pt-16'
+          >
           {/* Radial gradient overlay */}
           <ImageBackground
             source={require('../../assets/images/splash-radial-gradient.png')}
-            className="border-3 absolute left-0 top-0  h-full w-full "
+            className="border-3 absolute left-0 top-0 h-full w-full "
             resizeMode="cover"
           />
-          <SafeAreaView>
-            <KeyboardAwareScrollView
-              style={{}}
-              contentContainerStyle={{
-                alignContent: 'center',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: height,
-              }}>
               {/* Price Plan Content */}
               <View className="flex h-full w-full flex-col items-center justify-center gap-3 px-6 py-5">
                 <View className="flex w-full items-center justify-center py-5">
@@ -292,10 +273,8 @@ export default function PlanPrice() {
                   </TouchableOpacity>
                 </View>
               </View>
-            </KeyboardAwareScrollView>
-          </SafeAreaView>
         </LinearGradient>
       </View>
-    </>
+    </Layout>
   );
 }

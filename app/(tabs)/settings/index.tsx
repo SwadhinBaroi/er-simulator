@@ -1,19 +1,10 @@
-import { View, Text, TouchableOpacity, TextInput } from 'react-native';
-import React, { useState } from 'react';
-import Layout from 'components/layout';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { useState } from 'react';
 import { COLORS } from 'constants/color';
-import Hat from '../../../assets/svgs/hat.svg';
-import { Bookmark, Play, Plus, Save, X } from 'lucide-react-native';
-import NewImprovement from 'components/ui/newimprovement';
-import SavedImprovement from 'components/ui/savedimprovement';
-import { useRouter } from 'expo-router';
-import { Input } from 'components/input';
-import Camera from '../../../assets/svgs/camera.svg';
-import CardWithBar from 'components/ui/cardwithbar';
 import ProgressCard from 'components/ui/progresscard';
+import { Layout } from 'components/ui/layout';
 
 const Progress = () => {
-  const router = useRouter();
   const [completed, setCompleted] = useState(true);
   return (
     <Layout>

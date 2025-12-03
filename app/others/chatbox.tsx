@@ -3,31 +3,23 @@ import {
   Text,
   ImageBackground,
   TouchableOpacity,
-  useWindowDimensions,
-  TextInput,
   ScrollView,
 } from 'react-native';
-import React from 'react';
-import { COLORS } from 'constants/color';
 import { BlurView } from 'expo-blur';
 import { LinearGradient } from 'expo-linear-gradient';
 import TV from '../../assets/svgs/tv.svg';
 import Med from '../../assets/svgs/med.svg';
 import Mic from '../../assets/svgs/mic.svg';
 import TLogo from '../../assets/svgs/text.svg';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-controller';
-import { Input } from 'components/input';
 import { X } from 'lucide-react-native';
 import Horizontal from '../../assets/svgs/horizontal.svg';
 import Vertical from '../../assets/svgs/vertical.svg';
-import Layout from 'components/layout';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 
 const ChatBox = () => {
-  const { height } = useWindowDimensions();
   return (
-    <View style={{ flex: 1 }}>
+      <View style={{ flex: 1 }}>
       <ImageBackground source={require('../../assets/images/hospital.jpg')} style={{ flex: 1 }}>
         {/* <View
           style={{
@@ -229,7 +221,7 @@ const ChatBox = () => {
                       paddingVertical: 3,
                     }}>
                     <TLogo />
-                    <Text className="font-roboto  text-[16px] text-[#fff]">Text Input</Text>
+                    <Text className="font-roboto  text-[16px] text-[#fff]">Text Input button</Text>
                   </TouchableOpacity>
                 </View>
 

@@ -2,7 +2,6 @@ import { Stack } from 'expo-router';
 import 'nativewind';
 import { StatusBar } from 'react-native';
 import ToastManager from 'toastify-react-native';
-import '../../global.css';
 
 export default function AuthLayout() {
   return (

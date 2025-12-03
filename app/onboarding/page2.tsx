@@ -14,9 +14,11 @@ import {
 import { KeyboardAwareScrollView } from 'react-native-keyboard-controller';
 import Svg, { Circle, Path } from 'react-native-svg';
 import Logo from '../../assets/svgs/onboardingLogo.svg';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function Page() {
   const router = useRouter();
+  const { bottom } = useSafeAreaInsets();
 
   return (
     <>
@@ -66,7 +68,7 @@ export default function Page() {
             <Pressable
               onPress={() => router.push('/onboarding/page3')}
               className="absolute -right-1 pt-6"
-              style={{ bottom: 150 }}>
+              style={{ bottom: 25 + bottom }}>
               <Svg width={73} height={240} viewBox="0 0 73 240" fill="none">
                 <Path
                   d="M68.8757 208.087L70.5241 25.0742L70.5202 25.0768L71.1658 22.5854L70.7477 24.9268C70.7477 24.9268 73 -17.8446 73 8.6665C73 61.5083 0 72.0148 0 118.719C0 165.423 73 184.537 73 231.076C73 257.587 70.5241 216.582 70.5241 216.582L68.8757 208.087Z"

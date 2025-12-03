@@ -1,25 +1,19 @@
-import Layout from 'components/layout';
-import { Text, View, Image, Pressable, TouchableOpacity, TouchableHighlight } from 'react-native';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
 import Heartbit from '../../../assets/svgs/heartbit.svg';
 import { Heart } from 'lucide-react-native';
 import InputBox from 'components/ui/inputbox';
 import { useForm } from 'react-hook-form';
 import { COLORS } from 'constants/color';
-import { LinearGradient } from 'expo-linear-gradient';
-import Point from '../../../assets/svgs/point.svg';
-import { getGradientColorAt } from 'utils/gradientcolor';
 import CardWithBar from 'components/ui/cardwithbar';
-import Trauma from '../../../assets/svgs/trauma.svg';
 import Treatments from 'components/ui/treatments';
 import CardWithBox from 'components/ui/cardwithbox';
 import { useState } from 'react';
-import { useRouter } from 'expo-router';
+import { Layout } from 'components/ui/layout';
+// import Layout from 'components/layout';
 
 export default function Index() {
   const dummyForm = useForm();
-  const [guest, useGuest] = useState(false);
-
-  const router = useRouter();
+  const [guest] = useState(false);
 
   return (
     <Layout>

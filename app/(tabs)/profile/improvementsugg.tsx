@@ -1,11 +1,11 @@
 import { View, Text, TouchableOpacity } from 'react-native';
-import React, { useState } from 'react';
-import Layout from 'components/layout';
+import { useState } from 'react';
 import { COLORS } from 'constants/color';
-import { Bookmark, Plus, Save, X } from 'lucide-react-native';
+import { X } from 'lucide-react-native';
 import NewImprovement from 'components/ui/newimprovement';
 import SavedImprovement from 'components/ui/savedimprovement';
 import { router } from 'expo-router';
+import { Layout } from 'components/ui/layout';
 
 const Suggestions = () => {
   const [saved, setSaved] = useState(false);
